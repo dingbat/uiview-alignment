@@ -10,19 +10,18 @@
 
 enum
 {
-	UIViewAlignmentTop					= 1,
-	UIViewAlignmentBottom				= 2,
-	UIViewAlignmentLeft					= 4,
-	UIViewAlignmentRight				= 8,
+	UIViewAlignmentTop			= 1,
+	UIViewAlignmentBottom			= 2,
+	UIViewAlignmentLeft			= 4,
+	UIViewAlignmentRight			= 8,
 	UIViewAlignmentCenteredHorizontal	= 16,
 	UIViewAlignmentCenteredVertical		= 32,
-	UIViewAlignmentCentered				= UIViewAlignmentCenteredHorizontal | UIViewAlignmentCenteredVertical
+	UIViewAlignmentCentered			= UIViewAlignmentCenteredHorizontal | UIViewAlignmentCenteredVertical
 }
 typedef UIViewAlignment;
 
-//Masking is possible for UIViewAlignment, for example, you can do this to align to top left of the superview:
-
-// [self alignTo:(UIViewAlignmentTop | UIViewAlignmentLeft)];
+//Masking is possible for UIViewAlignment. For example, you can do this to align to top left of the superview:
+// [myView alignTo:(UIViewAlignmentTop | UIViewAlignmentLeft)];
 
 
 @interface UIView (alignment)
