@@ -74,7 +74,7 @@
 
 - (void) alignTo:(UIViewAlignment)a ofView:(UIView *)view
 {
-	[self alignTo:a withMargins:UIEdgeInsetsZero ofView:view.frame];
+	[self alignTo:a withMargins:UIEdgeInsetsZero ofView:view];
 }
 
 
