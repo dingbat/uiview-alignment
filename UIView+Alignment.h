@@ -1,6 +1,6 @@
 //
 //  UIView+Alignment.h
-//  PushNews
+//  UIView+Alignment
 //
 //  Created by Dan Hassin on 4/6/10.
 //  Copyright 2010 InContext. All rights reserved.
