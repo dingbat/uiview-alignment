@@ -37,14 +37,10 @@ typedef UIViewAlignment; // (accepts masking)
 
 // Aligns frame based on the bounds of the sender's superview
 - (void) alignTo:(UIViewAlignment)a;
-- (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e;
-
-// Aligns frame based on the given view's bounds
-- (void) alignTo:(UIViewAlignment)a ofView:(UIView *)v;
-- (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e ofView:(UIView *)view;
+- (void) alignTo:(UIViewAlignment)a margins:(UIEdgeInsets)e;
 
 // Aligns frame based on the given rect
 - (void) alignTo:(UIViewAlignment)a ofRect:(CGRect)r;
-- (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e ofRect:(CGRect)r;
+- (void) alignTo:(UIViewAlignment)a ofRect:(CGRect)r margins:(UIEdgeInsets)e;
 
 @end

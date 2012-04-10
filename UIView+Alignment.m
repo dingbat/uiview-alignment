@@ -11,30 +11,18 @@
 
 @implementation UIView (alignment)
 
-- (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e
+- (void) alignTo:(UIViewAlignment)a margins:(UIEdgeInsets)e
 {
 	//default is to align to superview
-	[self alignTo:a withMargins:e ofView:self.superview];
+	[self alignTo:a ofRect:self.superview.bounds margins:e];
 }
 
 - (void) alignTo:(UIViewAlignment)a
 {
-	[self alignTo:a withMargins:UIEdgeInsetsZero];
+	[self alignTo:a margins:UIEdgeInsetsZero];
 }
 
-- (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e ofView:(UIView *)view
-{
-	if (!view)
-		return;
-	[self alignTo:a withMargins:e ofRect:view.bounds];
-}
-
-- (void) alignTo:(UIViewAlignment)a ofView:(UIView *)view
-{
-	[self alignTo:a withMargins:UIEdgeInsetsZero ofView:view];
-}
-
-- (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e ofRect:(CGRect)r
+- (void) alignTo:(UIViewAlignment)a ofRect:(CGRect)r margins:(UIEdgeInsets)e
 {
 	CGRect rect = self.frame;
 	
@@ -67,7 +55,7 @@
 
 - (void) alignTo:(UIViewAlignment)a ofRect:(CGRect)rect
 {
-	[self alignTo:a withMargins:UIEdgeInsetsZero ofRect:rect];	
+	[self alignTo:a ofRect:rect margins:UIEdgeInsetsZero];	
 }
 
 
