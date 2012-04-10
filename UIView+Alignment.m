@@ -38,10 +38,10 @@
 {
 	CGRect rect = self.frame;
 	
-	if (a & UIViewAlignmentCenteredHorizontal)
+	if (a & UIViewAlignmentCenterHorizontal)
 		rect.origin.x = (r.size.width-rect.size.width)/2.0;
 	
-	if (a & UIViewAlignmentCenteredVertical)
+	if (a & UIViewAlignmentCenterVertical)
 		rect.origin.y = (r.size.height-rect.size.height)/2.0;
 	
 	if (a & UIViewAlignmentTop)

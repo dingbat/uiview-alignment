@@ -10,31 +10,40 @@
 
 enum
 {
-	UIViewAlignmentTop			= 1,
-	UIViewAlignmentBottom			= 2,
-	UIViewAlignmentLeft			= 4,
-	UIViewAlignmentRight			= 8,
-	UIViewAlignmentCenteredHorizontal	= 16,
-	UIViewAlignmentCenteredVertical		= 32,
-	UIViewAlignmentCentered			= UIViewAlignmentCenteredHorizontal | UIViewAlignmentCenteredVertical
+	UIViewAlignmentTop                  = 1 << 0,
+	UIViewAlignmentBottom               = 1 << 1, 
+	UIViewAlignmentLeft                 = 1 << 2,
+	UIViewAlignmentRight                = 1 << 3,
+	UIViewAlignmentCenterHorizontal     = 1 << 4,
+	UIViewAlignmentCenterVertical       = 1 << 5,
+	UIViewAlignmentCenter               = UIViewAlignmentCenterHorizontal | UIViewAlignmentCenterVertical
 }
-typedef UIViewAlignment;
+typedef UIViewAlignment; // (accepts masking)
 
-//Masking is possible for UIViewAlignment. For example, you can do this to align to top left of the superview:
-// [myView alignTo:(UIViewAlignmentTop | UIViewAlignmentLeft)];
+/*
+ Examples:
+ 
+ Left, with 10px margin:
+	[myView alignTo:UIViewAlignmentLeft withMargins:UIEdgeInsetsMake(0,10,0,0)];
+ 
+ Top-left:
+	[myView alignTo:(UIViewAlignmentTop | UIViewAlignmentLeft)];
 
+ Bottom & centered:
+	[myView alignTo:(UIViewAlignmentCenterHorizontal | UIViewAlignmentBottom)];
+*/
 
 @interface UIView (alignment)
 
-//by default aligns to the view's superview. does nothing if not in a superview
+// Aligns frame based on the bounds of the sender's superview
 - (void) alignTo:(UIViewAlignment)a;
 - (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e;
 
-//aligns frame based on the given view
+// Aligns frame based on the given view's bounds
 - (void) alignTo:(UIViewAlignment)a ofView:(UIView *)v;
 - (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e ofView:(UIView *)view;
 
-//aligns frame based on the given rect
+// Aligns frame based on the given rect
 - (void) alignTo:(UIViewAlignment)a ofRect:(CGRect)r;
 - (void) alignTo:(UIViewAlignment)a withMargins:(UIEdgeInsets)e ofRect:(CGRect)r;
 
