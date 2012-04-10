@@ -23,14 +23,14 @@ typedef UIViewAlignment; // (accepts masking)
 /*
  Examples:
  
- Left, with 10px margin:
+ Align myView to the far left of its superview, with 10px margin:
 	[myView alignTo:UIViewAlignmentLeft withMargins:UIEdgeInsetsMake(0,10,0,0)];
  
- Top-left:
+ Align myView to the top left of its superview:
 	[myView alignTo:(UIViewAlignmentTop | UIViewAlignmentLeft)];
 
- Bottom & centered:
-	[myView alignTo:(UIViewAlignmentCenterHorizontal | UIViewAlignmentBottom)];
+ Align myView bottom & centered in the given rect:
+	[myView alignTo:(UIViewAlignmentCenterHorizontal | UIViewAlignmentBottom) ofRect:otherRect];
 */
 
 @interface UIView (alignment)
