@@ -27,10 +27,10 @@
 	CGRect rect = self.frame;
 	
 	if (a & UIViewAlignmentCenterHorizontal)
-		rect.origin.x = (r.size.width-rect.size.width)/2.0;
+		rect.origin.x = r.origin.x + (r.size.width-rect.size.width)/2.0;
 	
 	if (a & UIViewAlignmentCenterVertical)
-		rect.origin.y = (r.size.height-rect.size.height)/2.0;
+		rect.origin.y = r.origin.y + (r.size.height-rect.size.height)/2.0;
 	
 	if (a & UIViewAlignmentTop)
 		rect.origin.y = r.origin.y;
