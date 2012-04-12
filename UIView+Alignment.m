@@ -36,13 +36,13 @@
 		rect.origin.y = r.origin.y;
 	
 	if (a & UIViewAlignmentBottom)
-		rect.origin.y = r.size.height-self.frame.size.height;
+		rect.origin.y = r.origin.y + r.size.height-self.frame.size.height;
 	
 	if (a & UIViewAlignmentLeft)
 		rect.origin.x = r.origin.x;
 	
 	if (a & UIViewAlignmentRight)
-		rect.origin.x = r.size.width-self.frame.size.width;
+		rect.origin.x = r.origin.x + r.size.width-self.frame.size.width;
 	
 	rect.origin.x += e.left;
 	rect.origin.x -= e.right;
