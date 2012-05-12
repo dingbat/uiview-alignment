@@ -1,9 +1,9 @@
 UIView+Alignment
 ========
 
-Tired of typing "CGRectMake" a million times for simple alignment stuff?
+Tired of typing "CGRectMake" a million times for simple alignment stuff? Me too.
 
-Me too. Here's an alignment category for UIView in iOS. See the .h file for method options and descriptions.
+Here's an alignment category for UIView in iOS. See the .h file for method options and descriptions.
 
 ### Examples
 
